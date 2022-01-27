@@ -1,0 +1,69 @@
+<pocketitems>
+	<!-- EXAMPLES FROM BASE GAME:
+		<card type="special" pickup="8" achievement="97" description="???" id="42" name="Chaos Card" announcer="334" mimiccharge="6" />
+		<card type="object" pickup="15" achievement="444" description="???" name="Cracked Key" id="78" mimiccharge="4" />
+	
+		!! Pill classes:
+			3: Major (a permanent effect, usually a stat modifier)
+			2: Medium (an effect with a significant impact, i.e. health or damage)
+			1: Minor (an effect which is only situationally useful)
+			0: Joke (an effect which is nigh useless)
+		!! Append a + or - at the end to denote a positive or negative effect, no suffix means a neutral effect
+
+		<pilleffect id="0" name="Bad Gas" announcer="328" class="1+" mimiccharge="1" / 
+		
+		backs and secondary slot are done via pickup tag, custom backs need new pickup-numbers, which must have an entry in the entities2.xml
+		already existing backs need the assigned pickup-numbers (e.g. 2 for suit back, 17 for uno back, look into gamefiles if you need them)
+	-->
+	
+	<!-- custom backs -->
+	
+	
+	<!-- non-custom backs -->
+	
+
+	<!-- pill effects -->
+	<pilleffect name="PILLPOCALYPSE!" mimiccharge="12" class="3+" />
+	<pilleffect name="Pillcollapse?" mimiccharge="1" class="3-" />
+	<pilleffect name="Petrification" mimiccharge="12" class="2" />
+	<pilleffect name="Leprosy" mimiccharge="3" class="1" />
+	<pilleffect name="Paranoia" mimiccharge="12" class="1" />
+	<pilleffect name="Methamphetamines" mimiccharge="6" class="3-" />
+	<pilleffect name="Xanax" mimiccharge="1" class="1+" />
+	<pilleffect name="ƒ-lax" mimiccharge="4" class="2+" />
+	<pilleffect name="Ж-lax" mimiccharge="1" class="1" />
+	<pilleffect name="Out of Body Experience" mimiccharge="4" class="1" />
+	<pilleffect name="Phantom Pains" mimiccharge="2" class="1" />
+	<pilleffect name="I'm Seeing Red!" mimiccharge="6" class="2+" />
+	<pilleffect name="I'm Seeing Red?" mimiccharge="2" class="1-" />
+	<pilleffect name="THC" mimiccharge="12" class="3-" />
+	<pilleffect name="Good Boy Pills" mimiccharge="1" class="1+" />
+	<pilleffect name="Plan B" mimiccharge="12" class="1" />
+	<pilleffect name="Rose Tinted Glasses" mimiccharge="12" class="1+" />
+	<pilleffect name="Dementia" mimiccharge="1" class="3-" />
+	<pilleffect name="Spirit salts" mimiccharge="6" class="2+" />
+	<pilleffect name="Bath salts" mimiccharge="1" class="2-" />
+	<pilleffect name="Imaginary Friends" mimiccharge="6" class="2+" />
+	<pilleffect name="Hallucinations" mimiccharge="1" class="2-" />
+	<pilleffect name="I'm Seeing Gold!" mimiccharge="12" class="3+" />
+	<pilleffect name="I'm Seeing Gold?" mimiccharge="1" class="2-" />
+	<pilleffect name="Friends to the Very End" mimiccharge="6" class="2+" />
+	<pilleffect name="Sworn Enemies" mimiccharge="1" class="2-" />
+	<pilleffect name="Calcification" mimiccharge="6" class="2+" />
+	<pilleffect name="Acetaminophen" mimiccharge="12" class="2+" />
+	<pilleffect name="Paracetamol" mimiccharge="4" class="1" />
+	<pilleffect name="Bipolar" mimiccharge="4" class="1" />
+	<pilleffect name="I found pills!" mimiccharge="12" class="3+" />
+	<pilleffect name="Diuretics" mimiccharge="1" class="0" />
+	<pilleffect name="Somethings really wrong" mimiccharge="6" class="2+" />
+	<pilleffect name="Weight Gain Supplements" mimiccharge="4" class="1+" />
+	<pilleffect name="Weight Loss Supplements" mimiccharge="3" class="1" />
+	<pilleffect name="Absolute Chaos" mimiccharge="12" class="2+" />
+	<pilleffect name="Mindblowing" mimiccharge="1" class="2-" />
+	<pilleffect name="Psilocybin" mimiccharge="1" class="3" />
+	<pilleffect name="Mystery Drug" mimiccharge="3" class="1+" />
+	<pilleffect name="Speed" mimiccharge="6" class="2+" />
+	<pilleffect name="Pharmaceutical Healing" mimiccharge="6" class="1+" />
+	<pilleffect name="Heartbroken" mimiccharge="2" class="2-" />
+	
+</pocketitems>
