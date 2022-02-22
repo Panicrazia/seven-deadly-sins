@@ -198,9 +198,10 @@ Mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, Mod.PostPlayerInit)
 function Mod:PostGameStarted(isContinued)
     if not isContinued then
         playerCustomHealth = {}
-        for player_index, player in pairs(getAllPlayers()) do
-            playerCustomHealth[player_index] = {}
-        end
+        playerCustomHealth[0] = {}
+        --for player_index, player in pairs(getAllPlayers()) do
+        --    playerCustomHealth[player_index] = {}
+        --end
     end
 end
 
@@ -353,8 +354,7 @@ function Mod:CacheUpdate(player, flags)
     elseif(flags == CACHE_LUCK) then
         
     end
-    player:AddGoldenBomb()
-    --this is to see if brekfast causes a cache evaluation
+    --simply picking an item up doesnt cause a cache evaluation
 end
 
 Mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE , Mod.CacheUpdate)
@@ -363,6 +363,13 @@ local function RenderPetrifyHearts()
     petrifiedHeartSprite:Play("Petrified_Heart", true)
     
     -- TODO: Do other chars, shouldnt be too difficult assuming the player index to health location on screen is the same each time
+    --[[
+        keeper: needs coin hearts
+        lost: dont apply
+        forgotten: do it right
+        je: now theres two of them
+        
+    ]]--
     local player = Game():GetPlayer(0)
     for heart_index, heart_info in pairs(player:GetData()["HealthIndex"]) do
         if heart_info ~= nil then
@@ -408,7 +415,7 @@ end
 Mod:AddCallback(ModCallbacks.MC_GET_SHADER_PARAMS, Mod.RenderHearts)
 
 function Mod:ReplacePillEffect(pillEffect, pillColor)
-    return ModPillEffects.LEPROSY
+    return ModPillEffects.SEEING_GOLD_GOOD
 end
 Mod:AddCallback(ModCallbacks.MC_GET_PILL_EFFECT, Mod.ReplacePillEffect)
 
@@ -590,38 +597,47 @@ function Mod:PillEffectIMMAGINARY_FRIENDS(pillEffect, player, flags)
     --make them spawn in different positions around isaac
     --i dunno what horse should do, just make 10?
 
-    player:AddMinisaac(player.Position, true)
-    player:AddMinisaac(player.Position, true)
-    player:AddMinisaac(player.Position, true)
-    player:AddMinisaac(player.Position, true)
-    player:AddMinisaac(player.Position, true)
+    for i = 0, 4, 1 do
+        player:AddMinisaac(player.Position, true)
+    end
+    if horse then
+        for i = 0, 4, 1 do
+            player:AddMinisaac(player.Position, true)
+        end
+    end
 end
 
 function Mod:PillEffectHALLUCINATIONS(pillEffect, player, flags)
     local horse = Mod:IsHorsePill(player)
-    
-    --horsepill should make those big wisps?
-    --also the positions should be far away from the screen and not all in the same place
-    
-    Isaac.Spawn(EntityType.ENTITY_WILLO, 0, 0, player.Position, Vector(0,0), nil)
-    Isaac.Spawn(EntityType.ENTITY_WILLO, 0, 0, player.Position, Vector(0,0), nil)
-    Isaac.Spawn(EntityType.ENTITY_WILLO, 0, 0, player.Position, Vector(0,0), nil)
-    Isaac.Spawn(EntityType.ENTITY_WILLO, 0, 0, player.Position, Vector(0,0), nil)
-    Isaac.Spawn(EntityType.ENTITY_WILLO, 0, 0, player.Position, Vector(0,0), nil)
+
+    local x = Game():GetRoom():GetCenterPos().X
+    local y = Game():GetRoom():GetCenterPos().Y
+    local entityToSpawn
+    if horse then 
+        entityToSpawn = EntityType.ENTITY_WILLO_L2
+    else
+        entityToSpawn = EntityType.ENTITY_WILLO
+    end
+
+    Isaac.Spawn(entityToSpawn, 0, 0, Vector(-100, y), Vector(0,0), nil)
+    Isaac.Spawn(entityToSpawn, 0, 0, Vector(x,-100), Vector(0,0), nil)
+    Isaac.Spawn(entityToSpawn, 0, 0, Vector(100+ (2*x),y), Vector(0,0), nil)
+    Isaac.Spawn(entityToSpawn, 0, 0, Vector(x,100+ (2*y)), Vector(0,0), nil)
 end
 
 function Mod:PillEffectSEEING_GOLD_GOOD(pillEffect, player, flags)
     local horse = Mod:IsHorsePill(player)
     
     Game():GetRoom():TurnGold()
-    Game()
+    --Game()
     local entities = Isaac.GetRoomEntities()
 
     for key, entity in pairs(entities) do
-        if(entitiy:IsEnemy()) then
+        if(entity:IsEnemy()) then
             entity:AddMidasFreeze(EntityRef(player), 150)
         end
         if(horse) then
+            --could add more golden transformations, like trinkets and 
             if(entity.Type == EntityType.ENTITY_PICKUP) then
                 if(entity.Variant == PickupVariant.PICKUP_KEY and entity.SubType ~= KeySubType.KEY_GOLDEN) then
                     entity:ToPickup():Morph(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_KEY, KeySubType.KEY_GOLDEN, true, true, true)
