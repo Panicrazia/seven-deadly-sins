@@ -26,38 +26,37 @@
 	<pilleffect name="PILLPOCALYPSE!" mimiccharge="12" class="3+" />
 	<pilleffect name="Pillcollapse?" mimiccharge="1" class="3-" />
 	<pilleffect name="Petrification" mimiccharge="12" class="2" />
-	<pilleffect name="Leprosy" mimiccharge="3" class="1" />
+	<pilleffect name="Leprosy" mimiccharge="6" class="1" />
 	<pilleffect name="Paranoia" mimiccharge="12" class="1" />
 	<pilleffect name="Methamphetamines" mimiccharge="6" class="3-" />
-	<pilleffect name="Xanax" mimiccharge="1" class="1+" />
+	<pilleffect name="Xanax" mimiccharge="3" class="1+" />
 	<pilleffect name="ƒ-lax" mimiccharge="4" class="2+" />
 	<pilleffect name="Ж-lax" mimiccharge="1" class="1" />
-	<pilleffect name="Out of Body Experience" mimiccharge="4" class="1" />
+	<pilleffect name="Clotting Agent" mimiccharge="12" class="3+" />
 	<pilleffect name="Phantom Pains" mimiccharge="2" class="1" />
-	<pilleffect name="I'm Seeing Red!" mimiccharge="6" class="2+" />
-	<pilleffect name="I'm Seeing Red?" mimiccharge="2" class="1-" />
+	<pilleffect name="I'm Seeing Red!" mimiccharge="6" class="1+" />
+	<pilleffect name="I'm Seeing Red?" mimiccharge="2" class="2-" />
 	<pilleffect name="THC" mimiccharge="12" class="3-" />
-	<pilleffect name="Good Boy Pills" mimiccharge="1" class="1+" />
+	<pilleffect name="Jesus Pills" mimiccharge="2" class="1+" />
 	<pilleffect name="Plan B" mimiccharge="12" class="1" />
-	<pilleffect name="Rose Tinted Glasses" mimiccharge="12" class="1+" />
+	<pilleffect name="Rose Tinted Glasses" mimiccharge="12" class="3+" />
 	<pilleffect name="Dementia" mimiccharge="1" class="3-" />
-	<pilleffect name="Spirit salts" mimiccharge="6" class="2+" />
+	<pilleffect name="Spirit Salts" mimiccharge="6" class="2+" />
 	<pilleffect name="Bath salts" mimiccharge="1" class="2-" />
-	<pilleffect name="Imaginary Friends" mimiccharge="6" class="2+" />
+	<pilleffect name="Imaginary Friends" mimiccharge="4" class="2+" />
 	<pilleffect name="Hallucinations" mimiccharge="1" class="2-" />
 	<pilleffect name="I'm Seeing Gold!" mimiccharge="12" class="3+" />
 	<pilleffect name="I'm Seeing Gold?" mimiccharge="1" class="2-" />
 	<pilleffect name="Friends to the Very End" mimiccharge="6" class="2+" />
-	<pilleffect name="Sworn Enemies" mimiccharge="1" class="2-" />
-	<pilleffect name="Calcification" mimiccharge="6" class="2+" />
+	<pilleffect name="Duke Pheromones" mimiccharge="1" class="2-" />
+	<pilleffect name="Calcification" mimiccharge="6" class="1+" />
 	<pilleffect name="Acetaminophen" mimiccharge="12" class="2+" />
 	<pilleffect name="Paracetamol" mimiccharge="4" class="1" />
-	<pilleffect name="Bipolar" mimiccharge="4" class="1" />
-	<pilleffect name="I found pills!" mimiccharge="12" class="3+" />
+	<pilleffect name="Bipolar" mimiccharge="6" class="3+" />
 	<pilleffect name="Diuretics" mimiccharge="1" class="0" />
 	<pilleffect name="Somethings really wrong" mimiccharge="6" class="2+" />
 	<pilleffect name="Weight Gain Supplements" mimiccharge="4" class="1+" />
-	<pilleffect name="Weight Loss Supplements" mimiccharge="3" class="1" />
+	<pilleffect name="Weight Loss Supplements" mimiccharge="2" class="1-" />
 	<pilleffect name="Absolute Chaos" mimiccharge="12" class="2+" />
 	<pilleffect name="Mindblowing" mimiccharge="1" class="2-" />
 	<pilleffect name="Psilocybin" mimiccharge="1" class="3" />
@@ -65,5 +64,8 @@
 	<pilleffect name="Speed" mimiccharge="6" class="2+" />
 	<pilleffect name="Pharmaceutical Healing" mimiccharge="6" class="1+" />
 	<pilleffect name="Heartbroken" mimiccharge="2" class="2-" />
+	<pilleffect name="Liquid Corn Starch" mimiccharge="1" class="2-" />
+	<pilleffect name="Krakatoa" mimiccharge="4" class="1+" />
+	<pilleffect name="Crash!" mimiccharge="6" class="2-" />
 	
 </pocketitems>
